@@ -3,8 +3,10 @@
  */
 public class Main {
     public static void main(String[] args) {
-        Cookie cookie = new Cookie();
-        cookie.calculateIngredients(cookie.getNumberOfCookies());
-        cookie.printRecipeMethod();
+        Console console = new Console();
+        IngredientsCalculator calculator = new IngredientsCalculator(console.getNumberOfCookies());
+        calculator.calculateIngredients();
+        RecipeMethodPrinter recipeMethodPrinter = new RecipeMethodPrinter();
+        recipeMethodPrinter.printRecipeMethod();
     }
 }
